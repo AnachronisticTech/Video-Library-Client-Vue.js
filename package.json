@@ -4,15 +4,18 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
+    "devstart": "browserify -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js & nodemon ./bin/www -e vue,js"
   },
   "dependencies": {
+    "browserify-hmr": "^0.3.7",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
     "pug": "^2.0.3",
-    "morgan": "~1.9.1"
+    "vue": "^2.6.10",
+    "vueify": "^9.4.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
