@@ -1,8 +1,0 @@
-{
-    "events": {
-        "restart": "browserify -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js"
-    },
-    "ignore": [
-        "public/javascripts/bundle.js"
-    ]
-}
