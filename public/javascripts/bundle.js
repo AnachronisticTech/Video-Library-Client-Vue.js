@@ -20991,12 +20991,69 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   }
 })()}
 },{"vue":6,"vue-hot-reload-api":3,"vueify/lib/insert-css":8}],10:[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".element[data-v-2cd575f4] {\n    width:300px;\n    border:2px solid grey;\n    margin:5px;\n}\n.thumbnail[data-v-2cd575f4] {\n    width:100%;\n    height:200px;\n    background:black;\n}\n/* .element h2 {} */\n/* .element h3 {} */")
+;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+
+// import
+module.exports = {
+    data() {
+        // var video = {};
+        // $.ajax({
+        //     type: "POST",
+        //     // data: data,
+        //     url: 'http://localhost:3000/video/5cd05f0ce8120859a0a9eb18',
+        //     dataType: "json",
+        //     success: function(json_data) {
+        //         // $.each(json_data, function(id) {
+        //         //     // console.log(JSON.stringify(this)); // DEBUG
+        //         //     obj[id] = this;
+        //         // });
+        //         video = json_data;
+        //         console.log(JSON.stringify(video));
+        //     },
+        //     async: false
+        // });
+        return {
+            title: 'test',
+            tags: ['tag1', 'tag2']
+        }
+    }
+}
+
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"element"},[_c('div',{staticClass:"thumbnail"},[_vm._v(" ")]),_vm._v(" "),_c('h2',[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('h3',[_vm._v(_vm._s(_vm.tags.toString()))])])}
+__vue__options__.staticRenderFns = []
+__vue__options__._scopeId = "data-v-2cd575f4"
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2cd575f4", __vue__options__)
+  } else {
+    hotAPI.reload("data-v-2cd575f4", __vue__options__)
+  }
+})()}
+},{"vue":6,"vue-hot-reload-api":3,"vueify/lib/insert-css":8}],11:[function(require,module,exports){
 var Vue = require('vue/dist/vue.js');
 
 Vue.component('cruelWorld', require('./components/cruelWorld.vue'));
+Vue.component('videoElement', require('./components/videoElement.vue'));
 
 const app = new Vue({
     el: '#app'
 });
 
-},{"./components/cruelWorld.vue":9,"vue/dist/vue.js":4}]},{},[10]);
+},{"./components/cruelWorld.vue":9,"./components/videoElement.vue":10,"vue/dist/vue.js":4}]},{},[11]);

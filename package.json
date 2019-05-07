@@ -7,6 +7,7 @@
     "devstart": "browserify -t vueify -e public/javascripts/main.js -o public/javascripts/bundle.js & nodemon ./bin/www -e vue,js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "browserify-hmr": "^0.3.7",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -15,6 +16,7 @@
     "morgan": "~1.9.1",
     "pug": "^2.0.3",
     "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
     "vueify": "^9.4.1"
   },
   "devDependencies": {
