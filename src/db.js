@@ -11,6 +11,9 @@ export default {
     all_videos() {
         return instance.get('/library/videos');
     },
+    all_tags() {
+        return instance.get('/library/tags');
+    },
     video_details(id) {
         return instance.get('library/video/'+id);
     },
