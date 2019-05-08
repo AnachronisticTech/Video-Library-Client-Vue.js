@@ -24,7 +24,7 @@
         methods: {
             toggleWidth: function(event) {
                 if (this.width == '0px') {
-                    this.width = '600px';
+                    this.width = '50%';
                 } else {
                     this.width = '0px';
                 }
@@ -68,6 +68,7 @@
         left:100px;
         bottom:00px;
         filter: drop-shadow(0px 0px 10px gray);
+        width:calc(100% - 120px);
     }
     .hex-box input {
         height:60px;
