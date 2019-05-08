@@ -2,7 +2,9 @@
     <div class="element" v-on:click="$router.push({name:'video', params:{id: video._id}})">
         <div class="thumbnail">&nbsp;</div>
         <h2>{{ video.title }}</h2>
-        <h3>{{ video.tags.toString() }}</h3>
+        <div class="tags">
+            <span v-for="(tag, index) in video.tags" :key="tag._id">{{ tag.name }}<span v-if="index != video.tags.length - 1">, </span></span>
+        </div>
     </div>
 </template>
 
@@ -27,5 +29,8 @@
         background:black;
     }
     /* .element h2 {} */
-    /* .element h3 {} */
+    .tags {
+        margin:10px;
+        text-align:left;
+    }
 </style>
