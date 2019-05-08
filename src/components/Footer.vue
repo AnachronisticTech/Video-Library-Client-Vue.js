@@ -1,13 +1,13 @@
 <template>
     <div class="footer">
         <div class="left">
+            <div class="hex-box">
+                <input type="text" placeholder="https://youtube.com/watch" v-bind:style="{width: width}">
+                <div class="hexagon"></div>
+            </div>
             <button class="add" v-on:click="toggleWidth">
                 <img src="@/assets/add_icon.png" />
             </button>
-            <div class="hex-box">
-                <input type="text" placeholder="https://youtube.com/watch" v-bind:style="{width: width}"  >
-                <div class="hexagon"></div>
-            </div>
         </div>
     </div>
 </template>
@@ -30,6 +30,7 @@
                 }
             },
             // getVideo: function(event) {
+            //     alert(this.link);
             //     if (this.link != '') {
             //         db.post('/library/video/create', this.link)
             //     }
@@ -66,7 +67,6 @@
         left:100px;
         bottom:00px;
         filter: drop-shadow(0px 0px 10px gray);
-        z-index:-1;
     }
     .hex-box input {
         height:60px;
@@ -79,6 +79,7 @@
         padding-right:20px;
         transition:width 0.5s ease;
         float:left;
+        outline:none;
     }
     .hexagon {
         position: relative;
@@ -88,7 +89,7 @@
         margin: 17.90px 0;
         transform:rotate(90deg);
         float:left;
-        z-index:-1;
+        /* z-index:-1; */
     }
     .hexagon:before {
         content: "";
