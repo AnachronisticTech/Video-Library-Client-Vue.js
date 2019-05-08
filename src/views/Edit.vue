@@ -5,8 +5,12 @@
             <source :src="'http://localhost:3000/library/video/'+id+'/view'">
         </video> -->
         <p>{{ video.summary }}</p>
+        <p>{{ video.tags }}</p>
+        <p>{{ tags }}</p>
         <ul>
-            <li v-for="tag in tags" :key="tag._id"></li>
+            <li v-for="tag in tags" :key="tag._id">
+                <input type="checkbox" :checked="tag in video.tags">{{ tag.name }}
+            </li>
         </ul>
     </div>
 </template>
