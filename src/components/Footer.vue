@@ -2,13 +2,14 @@
     <div class="footer">
         <div class="left">
             <div class="hex-box">
-                <input type="text" placeholder="https://youtube.com/watch" v-bind:style="{width: width}">
+                <input type="text" placeholder="https://www.youtube.com/watch" v-bind:style="{width: width}" v-model="link" v-on:keyup.enter="getVideo">
                 <div class="hexagon"></div>
             </div>
             <button class="add" v-on:click="toggleWidth">
                 <img src="@/assets/add_icon.png" />
             </button>
         </div>
+        <div class="right">{{ link }}</div>
     </div>
 </template>
 
@@ -29,12 +30,12 @@
                     this.width = '0px';
                 }
             },
-            // getVideo: function(event) {
-            //     alert(this.link);
-            //     if (this.link != '') {
-            //         db.post('/library/video/create', this.link)
-            //     }
-            // }
+            getVideo: function(event) {
+                // alert(this.link);
+                if (this.link != '') {
+                    db.create_video(this.link)
+                }
+            }
         }
     }
 </script>
@@ -91,16 +92,20 @@
         margin: 17.90px 0;
         transform:rotate(90deg);
         float:left;
-        /* z-index:-1; */
     }
     .hexagon:before {
         content: "";
         position: absolute;
         width: 0;
         left:25px;
-        top:31px;
-        border-bottom: 17.90px solid white;
+        top:29px;
+        border-bottom: 20px solid white;
         border-left: 31px solid transparent;
         border-right: 31px solid transparent;
+    }
+    .right {
+        position:absolute;
+        top:0;
+        right:0;
     }
 </style>

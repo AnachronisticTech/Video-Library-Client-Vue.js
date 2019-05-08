@@ -13,5 +13,8 @@ export default {
     },
     video_details(id) {
         return instance.get('library/video/'+id);
+    },
+    create_video(link) {
+        return instance.post('library/video/create', {link: link})
     }
 }
