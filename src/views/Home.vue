@@ -1,11 +1,9 @@
 <template>
     <div class="home">
-        <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
         <div v-for="video in videos" :key="video._id">
             <VideoElement :video="video"/>
         </div>
-        <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-        <!-- <Video :id="'5cd2dd42d1ba0d5d6cd813b0'"/> -->
+        <Footer />
     </div>
 </template>
 
@@ -14,6 +12,7 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import VideoElement from '@/components/VideoElement.vue'
 import Video from '@/views/Video.vue'
+import Footer from '@/components/Footer.vue'
 import db from '@/db.js'
 
 export default {
@@ -21,7 +20,8 @@ export default {
     components: {
         HelloWorld,
         VideoElement,
-        Video
+        Video,
+        Footer
     },
     data() {
         return {

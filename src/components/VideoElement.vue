@@ -1,5 +1,5 @@
 <template>
-    <div class="element" v-on:click="$router.push({name:'edit', params:{id: video._id}})">
+    <div class="element" v-on:click="$router.push({name:'video', params:{id: video._id}})">
         <div class="thumbnail">&nbsp;</div>
         <h2>{{ video.title }}</h2>
         <div class="tags">
