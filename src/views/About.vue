@@ -3,7 +3,7 @@
         <h1>Video Library</h1>
             <div class="body">
                 <p>The <i>Video Library</i> project is a web based interface to manage videos on a local device.</p>
-                <p>I created this project in order to accomplish two main goals: </p>
+                <p>I created this project in order to accomplish three main goals: </p>
                 <ul>
                     <li>An easy way to add new videos to a single location</li>
                     <li>A way to sort videos by tags which easily identify them by their characteristics</li>
