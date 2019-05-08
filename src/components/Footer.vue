@@ -48,6 +48,7 @@
         bottom:0;
         text-align:left;
         overflow-y:hidden;
+        pointer-events:none;
     }
     .add {
         height:120px;
@@ -57,6 +58,7 @@
         border:0;
         background:rgba(0,0,0,0);
         outline:none;
+        pointer-events:all;
     }
     .add img {
         width:100%;
@@ -83,6 +85,7 @@
         transition:width 0.5s ease;
         float:left;
         outline:none;
+        pointer-events:all;
     }
     .hexagon {
         position: relative;
