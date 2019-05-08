@@ -46,6 +46,7 @@
         position:absolute;
         bottom:0;
         text-align:left;
+        overflow-y:hidden;
     }
     .add {
         height:120px;
