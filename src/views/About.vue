@@ -5,7 +5,7 @@
             <p>The <i>Video Library</i> project is a system built to manage and organise videos on a local network device. This client web interface is built in Vue.js and is used to interact with the corresponding back-end server which can be obtained <a href="https://github.com/AnachronisticTech/Video-Library-Server-Node.js">here</a>.</p>
             <p>The project is loosely inspired by the iTunes library application, and aims to accomplish the following goals: </p>
             <ul>
-                <li>An easy way to add new videos to a single location from both local and remote locations</li>
+                <li>Provide an easy way to add new videos to a single location from both local and remote locations</li>
                 <li>Catalog videos by customisable tags which can be filtered and sorted via an intuitive interface</li>
                 <li>View and edit the properties and details of stored videos without the need for external tools</li>
             </ul>
