@@ -35,6 +35,7 @@
                 if (this.link != '') {
                     db.create_video(this.link)
                 }
+                this.link = '';
             }
         }
     }
