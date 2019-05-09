@@ -53,7 +53,8 @@
         height:50px;
     }
     .edit img {
-        width:50px;
-        height:50px;
+        width:100%;
+        height:100%;
+        filter: drop-shadow(0px 0px 5px gray);
     }
 </style>
