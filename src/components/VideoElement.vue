@@ -5,7 +5,7 @@
         <div class="tags">
             <span v-for="(tag, index) in video.tags" :key="tag._id">{{ tag.name }}<span v-if="index != video.tags.length - 1">, </span></span>
         </div>
-        <button class="edit" v-on:click.stop="edit">
+        <button class="edit" v-on:click.stop="$router.push({name:'edit', params:{id: video._id}})">
             <img src="@/assets/edit_icon.png">
         </button>
     </div>
