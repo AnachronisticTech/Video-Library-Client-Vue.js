@@ -19,5 +19,8 @@ export default {
     },
     create_video(link) {
         return instance.post('library/video/create', {link: link})
+    },
+    delete_video(id) {
+        return instance.post('library/video'+id+'/delete')
     }
 }

@@ -5,7 +5,11 @@
         <div class="tags">
             <span v-for="(tag, index) in video.tags" :key="tag._id">{{ tag.name }}<span v-if="index != video.tags.length - 1">, </span></span>
         </div>
-        <button class="edit" v-on:click.stop="$router.push({name:'edit', params:{id: video._id}})">
+        <button class="control" v-on:click.stop="del">
+            <img src="@/assets/trash_icon.png">
+        </button>
+        <!-- <button class="control" v-on:click.stop="edit"> -->
+        <button class="control" v-on:click.stop="$router.push({name:'edit', params:{id: video._id}})">
             <img src="@/assets/edit_icon.png">
         </button>
     </div>
@@ -18,6 +22,11 @@
         },
         methods: {
             edit: function(event) {
+                // this.$emit('setID', '');
+                // alert(this.video._id);
+                this.$emit('setID', this.video._id);
+            },
+            del: function(event) {
                 alert('hi');
             }
         }
@@ -41,7 +50,7 @@
         margin:10px;
         text-align:left;
     }
-    .edit {
+    .control {
         float:right;
         border:0;
         background:rgba(0,0,0,0);
@@ -52,7 +61,7 @@
         width:50px;
         height:50px;
     }
-    .edit img {
+    .control img {
         width:100%;
         height:100%;
         filter: drop-shadow(0px 0px 5px gray);
