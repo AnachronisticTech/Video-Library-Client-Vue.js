@@ -32,5 +32,7 @@
 </script>
 
 <style scoped>
-
+    video {
+        outline:none;
+    }
 </style>
